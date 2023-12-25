@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CssFiles/NavStyle.css">
+    <title>3D Market</title>
+    <meta name="title" content="jQuery One Page Scroll by Pete R. | The Pete Design" />
+	<meta name="description" content="Create a beautiful 3D tilted effect on scroll with jQuery Tilted Page Scroll plugin by Pete Rojwongsuriya" />
+	<link rel="image_src" href="/images/tiltedpage_scroll_image.png" />
+
+	<meta content="http://www.thepetedesign.com/demos/tiltedpage_scroll_demo.html" property="og:url" />
+	<meta content="http://www.thepetedesign.com/images/tiltedpage_scroll_image.png" property="og:image" />
+	<link rel="shortcut icon" id="favicon" href="favicon.png"> 
+	<meta name="author" content="Pete R.">
+	<link rel="canonical" href="http://www.thepetedesign.com/demos/tiltedpage_scroll_demo.html" />
+  <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="jquery.tiltedpage-scroll.js"></script>
+  <link href='tiltedpage-scroll.css' rel='stylesheet' type='text/css'>
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      background: grey;
+      padding: 0;
+      text-align: center;
+      font-family: 'open sans';
+      position: relative;
+      margin: 0;
+      height: 100%;
+    }
+    .main {
+      float: center;
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    
+    .main h1 {
+      padding:20px 50px 10px;
+      float: left;
+      width: 100%;
+      font-size: 60px;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      font-weight: 100;
+      margin: 0;
+      padding-top: 55px;
+      font-family: 'Open Sans';
+      letter-spacing: -1px;
+      text-transform: capitalize;
+    }
+   
+    .main h1.demo1 {
+      background: #1ABC9C;
+    }
+    
+    
+    .main {
+      margin-bottom: 350px;
+      overflow: hidden;
+    }
+    .tps-section {
+      width: 100% !important;
+      max-width: 1000px;
+      margin: 0 auto;
+      height: 500px;
+    }
+    
+    .tps-section .tps-wrapper {
+      border-radius: 5px;
+    }
+    .tps-section .tps-wrapper h1 {
+      position: relative;
+      height: 100%;
+      position: absolute;
+    }
+    .tps-section .tps-wrapper h1 a{
+      color: white;
+      position: absolute;
+      background: rgba(0,0,0,0.25);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      padding-top: 225px;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      left: 0;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 20px;
+      font-size: 14px;
+      line-height: 190%;
+    }
+    
+    .tps-section .tps-wrapper h1 a small{
+      text-transform: none;
+      font-style: italic;
+      font-weight: 400;
+      font-family: noto serif;
+      letter-spacing: 1px;
+      font-size: 14px;
+    }
+    
+    .tps-section:nth-child(1n+1) .tps-wrapper {
+      background: url(demo1.jpg) center center;
+      background-size: cover;
+    }
+    
+    .tps-section:nth-child(2n+1) .tps-wrapper {
+      background:  url(demo2.jpg) center center;
+      background-size: cover;
+    }
+    
+    .tps-section:nth-child(3n+1) .tps-wrapper {
+      background:  url(demo3.jpg) center center;
+      background-size: cover;
+    }
+    
+    .tps-section:nth-child(4n+1) .tps-wrapper {
+      background:  url(demo4.jpg) center center;
+      background-size: cover;
+    }
+    
+    .header {
+      overflow: hidden;
+      clear: both;
+    }
+	  body .one .bsa_it_ad { background: transparent; border: none; font-family: inherit; padding: 0 15px 0 10px; margin: 0; text-align: center; }
+body .one .bsa_it_ad:hover img { -moz-box-shadow: 0 0 3px #000; -webkit-box-shadow: 0 0 3px #000; box-shadow: 0 0 3px #000; }
+body .one .bsa_it_ad .bsa_it_i { display: block; padding: 0; float: none; margin: 0 0 5px; }
+body .one .bsa_it_ad .bsa_it_i img { padding: 0; border: none; }
+body .one .bsa_it_ad .bsa_it_t { padding: 6px 0; }
+body .one .bsa_it_ad .bsa_it_d { padding: 0; font-size: 12px; color: #333; }
+body .one .bsa_it_p { display: none; }
+body #bsap_aplink, body #bsap_aplink:hover { display: block; font-size: 10px; margin: 12px 15px 0; text-align: center; }
+	  
+#carbonads {
+  --width: 180px;
+  --font-size: 14px;
+}
+
+#carbonads {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 20px;
+  max-width: var(--width);
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 0 0 1px hsla(0, 0%, 0%, .1);
+  background-color: hsl(0, 0%, 98%);
+  font-size: var(--font-size);
+  line-height: 1.5;
+}
+
+#carbonads a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#carbonads a:hover {
+  color: inherit;
+}
+
+#carbonads span {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.carbon-img {
+  display: block;
+  margin-bottom: 8px;
+  max-width: var(--width);
+  line-height: 1;
+}
+
+.carbon-img img {
+  display: block;
+  margin: 0 auto;
+  max-width: var(--width) !important;
+  width: var(--width);
+  height: auto;
+}
+
+.carbon-text {
+  display: block;
+  padding: 0 1em 8px;
+}
+
+.carbon-poweredby {
+  display: block;
+  padding: 10px var(--font-size);
+  background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-weight: 600;
+  font-size: 9px;
+  line-height: 0;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 759px) {
+  #carbonads {
+    float: none;
+    margin: 0 auto;
+    max-width: 330px;
+  }
+  #carbonads span {
+    position: relative;
+  }
+  #carbonads > span {
+    max-width: none;
+  }
+  .carbon-img {
+    float: left;
+    margin: 0;
+  }
+
+  .carbon-img img {
+    max-width: 130px !important;
+  }
+  .carbon-text {
+    float: left;
+    margin-bottom: 0;
+    padding: 8px 20px;
+    text-align: left;
+    max-width: calc(100% - 130px - 3em);
+  }
+  .carbon-poweredby {
+    left: 130px;
+    bottom: 0;
+    display: block;
+    width: 100%;
+  }}
+	</style>
+	<script>
+	  $(document).ready(function(){
+      $(".main").tiltedpage_scroll({
+        angle: 20
+      });
+		});
+		
+	  </script>
+    <link rel="stylesheet" href="../css/demo.css">
+    <script src="../js/demo.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Markets</h1>
+        <nav>
+          <ul>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#about">About</a></li>
+            <li><a href="../../../index.html#projects">Project</a></li>
+            <li><a href="markets.html">Markets</a></li>
+            <li><a href="../../../index.html#signup">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- End AdPacks.com Zone Code -->
+  	  <div class="main">
+        <div class="header"> 
+        </div>
+        <section class="page1">
+          <div class="page_container">
+            <h1 ><a target="_blank">STORE 1<br><small>Lacoste Clothes</small></a></h1>
+          </div>
+        </section>
+        <section class="page2">
+          <div class="page_container">
+            <h1><a  target="_blank">STORE 2<br><small>Women Clothes</small></a></h1>
+          </div>
+        </section>
+        <section class="page3">
+          <div class="page_container">
+            <h1><a target="_blank">Travel to ZhangJiaJie (Avatar's Mountain) in China<br><small>Completed on 20 Jan 2014</small></a></h1>
+          </div>
+        </section>
+        <section class="page4">
+          <div class="page_container">
+            <h1><a  target="_blank">Ride a Camel in the Australian Outback<br><small>Completed on 17 Feb 2014</small></a></h1>
+          </div>
+        </section>
+        <section class="page5">
+          <div class="page_container">
+            <h1><a  target="_blank">Travel to Sydney, Australia<br><small>Completed on 14 Feb 2014</small></a></h1>
+          </div>
+        </section>
+        <section class="page6">
+          <div class="page_container">
+            <h1><a  target="_blank">Visit Uluru (Ayers Rock), Australia<br><small>Completed on 17 Feb 2014</small></a></h1>
+          </div>
+        </section>
+        <section class="page7">
+          <div class="page_container">
+            <h1><a target="_blank">Travel to ZhangJiaJie (Avatar's Mountain) in China<br><small>Completed on 20 Jan 2014</small></a></h1>
+          </div>
+        </section>
+        <section class="page8">
+          <div class="page_container">
+            <h1><a  target="_blank">Ride a Camel in the Australian Outback<br><small>Completed on 17 Feb 2014</small></a></h1>
+          </div>
+        </section>
+      </div>
+      
+    </div>
+</body>
+</html>

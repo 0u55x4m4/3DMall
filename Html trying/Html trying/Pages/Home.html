@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CssFiles/NavStyle.css">
+    <link rel="stylesheet" href="../CssFiles/homeStyle.css">
+    <title>3D Market</title>
+  </head>
+  <body>
+    <header>
+      <h1>Logo</h1>
+      <nav>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="markets.html">Markets</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      
+      <img class="img1" src="https://img1.cgtrader.com/items/111019/41a069ddb4/city-shopping-mall-033-3d-model-max.jpg" alt="mall">
+      <div class="bigText"><h1>3D Market For rentting</h1></div>
+      <a href=""><button class="btn" onmouseenter="blurImage(),zooming ()" onmouseleave="removeBlur(),zoomingOut ()">Discover</button></a>
+    </div>
+    <!--  -->
+    <script>
+      function blurImage() {
+          // Get the image element
+          var image = document.querySelector('.container img');
+          // Add the 'blurry' class to apply the blur effect
+          image.classList.add('blurry');
+      }
+
+      function removeBlur() {
+          // Get the image element
+          var image = document.querySelector('.container img');
+          // Remove the 'blurry' class to remove the blur effect
+          image.classList.remove('blurry');
+      }
+      function zooming (){
+        var text = document.querySelector('.container h1');
+        text.classList.add('zoomIn');
+      }
+      function zoomingOut (){
+        var text = document.querySelector('.container h1');
+        text.classList.remove('zoomIn');
+      }
+    </script>
+  </body>
+</html>
